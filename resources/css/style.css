@@ -1,5 +1,6 @@
 html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Noto Serif', serif;
+    background-color: gray;
 }
 
 #name {
@@ -8,4 +9,12 @@ html {
 
 h1, h2 {
     font-family: 'Comfortaa', cursive;
+}
+
+#portrait {
+    max-height: 200px;
+}
+
+.icon {
+    height: 100px;
 }
