@@ -1,7 +1,73 @@
+/* Reset some styles */
+ol, ul {
+    list-style: none;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    font: inherit;
+  }
+
 html {
     font-family: 'Noto Serif', serif;
     background-color: gray;
 }
+
+
+
+.main-content {
+    position: relative;
+    top: 10rem; /* To offset for fixed header. */
+  }
+
+/* Header */
+
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    border-bottom: solid 1px #c6c1c1;
+    background-color: white;
+  }
+  
+  header .content {
+    display: flex;
+    align-items: center;
+    padding: 1.875rem;
+  }
+  
+  header #name {
+    font-size: 2.4rem;
+    flex: 1;
+  }
+
+  header #logo {
+      padding-right: 1rem;
+  }
+  
+  header nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    padding-left: 3.5rem;
+  }
+  
+  nav a {
+    vertical-align: bottom;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #4a4a4a;
+  }
+  
+  
+
+
+
+
+
+
 
 #logo {
     height: 30px;
@@ -12,7 +78,7 @@ html {
     font-size: 35px;
 }
 
-h1, h2 {
+h1, h2, header #logo {
     font-family: 'Comfortaa', cursive;
 }
 
@@ -23,3 +89,11 @@ h1, h2 {
 .icon {
     height: 70px;
 }
+
+/*keeps in-page reference from putting it under the header*/
+:target::before {
+    content: "";
+    display: block;
+    height: 10rem; /* fixed header height*/
+    margin: -10rem 0 0; /* negative fixed header height */
+  }
