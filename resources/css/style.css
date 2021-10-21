@@ -3,8 +3,13 @@ html {
     background-color: gray;
 }
 
+#logo {
+    height: 30px;
+}
+
 #name {
     font-family: 'Comfortaa', cursive;
+    font-size: 35px;
 }
 
 h1, h2 {
