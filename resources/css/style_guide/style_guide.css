@@ -1,0 +1,68 @@
+html {
+    font-size: 20px;
+}
+
+h1 {
+    Font-Family: 'Comfortaa', Sans-Serif;
+    Font-Size: 2.8rem;
+}
+h2 {
+    Font-Family: 'Comfortaa', Sans-Serif;
+    Font-Size: 1.4rem;
+}
+p {
+    Font-Family: 'Noto Serif', Serif;
+    Font-Size: 1rem;
+}
+header {
+    margin: 20px;
+}
+.group {
+    border: 1px solid black;
+    margin: 20px;
+    padding: 15px;
+}
+.panel {
+    text-align: center;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 15px;
+    margin: 10px;
+}
+.purple-pink {
+    background-color: hsl(287, 87%, 53%);
+}
+.light-slate {
+    background-color: hsl(225, 31%, 74%);
+}
+.slate {
+    background-color: hsl(225, 20%, 61%);
+}
+.green {
+    background-color: hsl(166, 100%, 70%);
+}
+.light-navy {
+    color: hsl(225, 31%, 74%);
+    background-color: hsl(218, 58%, 16%);
+}
+.navy {
+    color: hsl(225, 31%, 74%);
+    background-color: hsl(216, 65%, 11%);
+}
+.oxygen {
+    Font-Family: 'Oxygen', Sans-Serif;
+    Font-Size: 46px;
+}
+.noto-sarif {
+    Font-Family: 'Noto Serif', Serif;
+    Font-Size: 16px;    
+}
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+li {
+    text-align: left;
+}
