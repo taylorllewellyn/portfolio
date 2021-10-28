@@ -1,49 +1,68 @@
-/* Reset some styles */
-ol, ul {
-    list-style: none;
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-    font: inherit;
-  }
 
 html {
-    font-family: 'Noto Serif', serif;
-    background-color: gray;
+  font-family: 'Noto Serif', serif;
+  font-size: 20px;
+  color: hsl(225, 20%, 61%);
+  background-color: hsl(216, 65%, 11%);
+}
+body {
+  
+}
+h1 {
+  color: hsl(226, 70%, 88%);
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 0.67em;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+h2 {
+  color: hsl(166, 100%, 70%);
+  font-size: 1.4rem;
+  margin: 0.83em;
+  padding-top: 1rem;
+}
+
+p {
+  color: hsl(225, 20%, 61%);
+  margin: 1em;
+  line-height: 1.5;
+}
+
+a {
+  color: hsl(166, 100%, 70%);
+}
+h1, h2, header #logo {
+  font-family: 'Comfortaa', Sans-Serif;
 }
 
 
 
-.main-content {
-    position: relative;
-    top: 10rem; /* To offset for fixed header. */
-  }
-
 /* Header */
 
-header {
+  header {
     position: fixed;
     z-index: 100;
     width: 100%;
-    border-bottom: solid 1px #c6c1c1;
-    background-color: white;
+    background-color: hsl(216, 65%, 11%, 0.95);
+    
   }
-  
+    
   header .content {
     display: flex;
     align-items: center;
-    padding: 1.875rem;
+    padding: 1rem;
   }
   
   header #name {
     font-size: 2.4rem;
+    color: hsl(226, 70%, 88%);
     flex: 1;
   }
 
   header #logo {
-      padding-right: 1rem;
+    padding-right: 1rem;
   }
   
   header nav ul {
@@ -58,42 +77,69 @@ header {
     vertical-align: bottom;
     line-height: 1.6;
     font-size: 1rem;
-    color: #4a4a4a;
   }
-  
-  
 
+  #logo {
+    height: 1.9rem;
+  }
 
-
-
-
-
-
-#logo {
-    height: 30px;
-}
-
-#name {
+  #name {
     font-family: 'Comfortaa', cursive;
     font-size: 35px;
-}
-
-h1, h2, header #logo {
-    font-family: 'Comfortaa', cursive;
-}
-
-#portrait {
-    max-height: 200px;
-}
-
-.icon {
-    height: 70px;
-}
-
-/*keeps in-page reference from putting it under the header*/
-:target::before {
-    content: "";
-    display: block;
-    height: 10rem; /* fixed header height*/
-    margin: -10rem 0 0; /* negative fixed header height */
   }
+
+
+/* main content* */
+
+  .main-content {
+    position: relative;
+    top: 5rem; /* To offset for fixed header. */
+    margin: 0 8px;
+  }
+
+  #portrait {
+    flex: 1 100%;
+    max-width: 20%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+  }
+
+  #aboutMeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .box {
+    background-color: hsl(218, 58%, 16%);
+    max-width: 1000px;
+    box-shadow: 5px 5px 5px #777777;
+    scroll-margin-top: 4em;
+  }
+
+  #skills-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.83rem;
+  }
+
+  .icon {
+    max-height: 70px;
+    margin-bottom: 0.83rem;
+  }
+
+
+/* footer */
+  footer {
+    margin-top: 2rem;
+  }
+  .contact {
+    font-size: 0.75rem;
+  }
+  .designedBy {
+    font-size: 0.6rem;
+    margin-top: .5rem;
+    padding-bottom: 1rem;
+  }
+    
