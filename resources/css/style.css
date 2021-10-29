@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-family: 'Noto Serif', serif;
@@ -5,9 +8,7 @@ html {
   color: hsl(225, 20%, 61%);
   background-color: hsl(216, 65%, 11%);
 }
-body {
-  
-}
+
 h1 {
   color: hsl(226, 70%, 88%);
   text-align: center;
@@ -89,14 +90,22 @@ h1, h2, header #logo {
   }
 
 
-/* main content* */
+/* main content */
 
   .main-content {
     position: relative;
     top: 5rem; /* To offset for fixed header. */
-    margin: 0 8px;
+    margin: 0 15px;
   }
 
+  .box {
+    background-color: hsl(218, 58%, 16%);
+    max-width: 1000px;
+    box-shadow: 5px 5px 5px #777777;
+    scroll-margin-top: 4em;
+  }
+
+/* about me */
   #portrait {
     flex: 1 100%;
     max-width: 20%;
@@ -111,12 +120,38 @@ h1, h2, header #logo {
     justify-content: flex-start;
   }
 
-  .box {
-    background-color: hsl(218, 58%, 16%);
-    max-width: 1000px;
-    box-shadow: 5px 5px 5px #777777;
-    scroll-margin-top: 4em;
+/* projects */
+
+  #projectsGrid {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 20px;
   }
+
+  .imageContainer {
+    width: 90%;
+    margin: 5%;
+  }
+
+  .projectImage {
+    max-width: 100%;
+    opacity: 75%;
+  }
+
+  .projectContainer {
+    background-color: hsl(216, 65%, 11%);
+    width: 300px;
+    text-align: center;
+    margin: 5px;
+  }
+
+  .projectContainer h3 {
+    padding: 10px 5px;
+    color: hsl(166, 100%, 70%);
+  }
+
+
+/* skills */
 
   #skills-container {
     display: flex;
