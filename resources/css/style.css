@@ -100,14 +100,15 @@ h1, h2, header #logo {
 
   .box {
     background-color: hsl(218, 58%, 16%);
-    max-width: 1000px;
-    box-shadow: 5px 5px 5px #777777;
+    max-width: 1300px;
+    box-shadow: 5px 5px 5px hsl(166, 40%, 50%);
     scroll-margin-top: 4em;
   }
 
 /* about me */
   #portrait {
     flex: 1 100%;
+    margin-top: 4rem;
     max-width: 20%;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -116,7 +117,7 @@ h1, h2, header #logo {
 
   #aboutMeContainer {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
   }
 
@@ -146,7 +147,7 @@ h1, h2, header #logo {
   }
 
   .projectContainer h3 {
-    padding: 10px 5px;
+    padding: 10px 5px 0px 5px;
     color: hsl(166, 100%, 70%);
   }
 
