@@ -56,13 +56,14 @@ h1, h2, header #logo {
     padding: 1rem;
   }
   
-  header #name {
+  #name {
+    font-family: 'Comfortaa', cursive;
     font-size: 2.4rem;
     color: hsl(226, 70%, 88%);
     flex: 1;
   }
 
-  header #logo {
+  #logo {
     padding-right: 1rem;
   }
   
@@ -71,7 +72,7 @@ h1, h2, header #logo {
   }
   
   nav li {
-    padding-left: 3.5rem;
+    padding-left: 1.5rem;
   }
   
   nav a {
@@ -84,11 +85,39 @@ h1, h2, header #logo {
     height: 1.9rem;
   }
 
-  #name {
-    font-family: 'Comfortaa', cursive;
-    font-size: 35px;
+  @media only screen and (max-width: 1050px) {
+    #name {
+      font-size: 1.4rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
   }
 
+  @media only screen and (max-width: 750px) {
+    #name {
+      font-size: 1rem;
+    }
+    nav a {
+      font-size: 0.75rem;
+      display: none;
+    }
+    h1 {
+      font-size: 1rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+    h3 {
+      font-size: .9rem;
+    }
+    p {
+      font-size: .75rem;
+    }
+    #portrait {
+      display: none;
+    }
+  }
 
 /* main content */
 
@@ -129,6 +158,15 @@ h1, h2, header #logo {
     padding: 0 20px 20px;
   }
 
+
+  .projectContainer {
+    flex: 1 1 0;
+    background-color: hsl(216, 65%, 11%);
+    max-width: 350px;
+    text-align: center;
+    margin: 5px;
+  }
+
   .imageContainer {
     width: 90%;
     margin: 5%;
@@ -139,25 +177,35 @@ h1, h2, header #logo {
     opacity: 75%;
   }
 
-  .projectContainer {
-    background-color: hsl(216, 65%, 11%);
-    width: 300px;
-    text-align: center;
-    margin: 5px;
-  }
-
   .projectContainer h3 {
     padding: 10px 5px 0px 5px;
     color: hsl(166, 100%, 70%);
   }
 
+  @media only screen and (max-width: 750px) {
+    #projectsGrid {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .projectContainer {
+      max-width: 100%;
+      margin: 10px 5px;
+    }
+  }
 
 /* skills */
 
   #skills-container {
     display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+  }
+
+  .icons {
+    display: flex;
     justify-content: space-between;
-    margin: 0.83rem;
+    width: 30%;
   }
 
   .icon {
@@ -165,6 +213,17 @@ h1, h2, header #logo {
     margin-bottom: 0.83rem;
   }
 
+  @media only screen and (max-width: 750px) {
+    #skills-container {
+      flex-wrap: wrap;
+    }
+  
+    .icons {
+      width: 100%;
+      justify-content: space-around;
+    }
+
+  }
 
 /* footer */
   footer {
