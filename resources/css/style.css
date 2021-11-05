@@ -33,12 +33,42 @@ p {
 
 a {
   color: hsl(166, 100%, 70%);
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+  overflow: hidden;
 }
 h1, h2, header #logo {
   font-family: 'Comfortaa', Sans-Serif;
 }
 
+/* add underline to head links */
+  .header-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 0.05em;
+    background-color: hsl(166, 100%, 70%);
+    opacity: 1;
+    transition: opacity 300ms, transform 300ms;
+    transform: translate3d(-105%, 0, 0);
+  }
 
+  .header-links a:hover::after,
+  .header-links a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+/* add underline to project titles and email address */
+  h3, .contact h5 {
+    text-decoration: underline 0.05em hsl(166, 100%, 70%, 0);
+    transition: text-decoration-color 300ms;
+  }
+  .projectContainer:hover h3, .contact h5:hover {
+    text-decoration-color: hsl(166, 100%, 70%, 1);
+  }
 
 /* Header */
 
@@ -124,7 +154,7 @@ h1, h2, header #logo {
   .main-content {
     position: relative;
     top: 5rem; /* To offset for fixed header. */
-    margin: 0 15px;
+    margin: 0 20px 0px 15px;
   }
 
   .box {
@@ -165,7 +195,15 @@ h1, h2, header #logo {
     max-width: 350px;
     text-align: center;
     margin: 5px;
+    transform: scale(100%, 100%);
+    transition-duration: 200ms;
   }
+
+  .projectContainer:hover {
+    transform: scale(105%, 105%);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  };
 
   .imageContainer {
     width: 90%;
