@@ -10,23 +10,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Noto+Serif&display=swap" rel="stylesheet">
-    
+    <script src="https://kit.fontawesome.com/47f7d45865.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="resources/css/reset.css">
     <link rel="stylesheet" href="resources/css/style.css">
 
 </head>
 
 <body>
-    <header>
+    <header id="site-header">
         <div class="content">
             <a href="index.html" id="nameold"><img id="logo" src="resources/images/logo.png" alt="Logo of initials T L" title="TL Logo"></a>
                 <div id="name">Taylor Llewellyn</div>
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
             <nav class="header-links">
                 <ul>
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a id="test" href="#">Contact</a></li>
+                    <li><a href="#aboutMe"><i class="fas fa-info nav-icon"></i>About Me</a></li>
+                    <li><a href="#projects"><i class="fas fa-project-diagram nav-icon"></i>Projects</a></li>
+                    <li><a href="#skills"><i class="fas fa-laptop-code nav-icon"></i>Skills</a></li>
+                    <li><a id="test" href="mailto: Taylor.Llewellyn@gmail.com"><i class="fas fa-envelope nav-icon"></i>Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -120,6 +124,9 @@
             </div>
         </footer>
     </div>
+    <link rel="stylesheet" href="resources/js/jquery-ui-1.13.0/jquery-ui.min.css">
+    <script src="resources/js/jquery-3.6.0.js"></script>
+    <script src="resources/js/jquery-ui-1.13.0/jquery-ui.min.js"></script>
     <script src="resources/js/script.js"></script>
 </body>
 </html>

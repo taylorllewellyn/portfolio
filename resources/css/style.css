@@ -25,6 +25,10 @@ h2 {
   padding-top: 1rem;
 }
 
+#aboutMe h2 {
+  margin-top: 0;
+}
+
 p {
   color: hsl(225, 20%, 61%);
   margin: 1em;
@@ -42,7 +46,7 @@ h1, h2, header #logo {
   font-family: 'Comfortaa', Sans-Serif;
 }
 
-/* add underline to head links */
+/* add underline to nav links */
   .header-links a::after {
     content: '';
     position: absolute;
@@ -72,12 +76,19 @@ h1, h2, header #logo {
 
 /* Header */
 
-  header {
+  #site-header {
     position: fixed;
     z-index: 100;
     width: 100%;
     background-color: hsl(216, 65%, 11%, 0.95);
-    
+    height: 70px;
+    top: 0;
+    transition: all .3s ease;
+    box-shadow: 0 1px 25px rgba(0,0,0, .1);
+  }
+
+  #site-header.hide {
+    top: -70px;
   }
     
   header .content {
@@ -97,7 +108,7 @@ h1, h2, header #logo {
     padding-right: 1rem;
   }
   
-  header nav ul {
+  nav ul {
     display: flex;
   }
   
@@ -109,8 +120,12 @@ h1, h2, header #logo {
     vertical-align: bottom;
     line-height: 1.6;
     font-size: 1rem;
+    padding: 0;
   }
 
+  .nav-icon {
+    display: none; /* Hide nav icons for all except phone */
+  }
   #logo {
     height: 1.9rem;
   }
@@ -128,9 +143,73 @@ h1, h2, header #logo {
     #name {
       font-size: 1rem;
     }
+    .menu-toggle {
+      padding: 1em;
+      cursor: pointer;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      display: block;
+      background: hsl(166, 100%, 70%);
+      height: 3px;
+      width: 1.5em;
+      border-radius: 3px;
+      transition: ease-in-out 500ms;
+    }
+
+    .hamburger::before {
+      transform: translateY(-6px);
+    }
+    .hamburger::after {
+      transform: translateY(3px);
+    }
+    .header-links {
+      position: absolute;
+      top: 100%;
+      right: 10px;
+      background: hsl(218, 58%, 16%);
+      box-shadow: 5px 5px 5px hsl(166, 40%, 50%);
+      clip-path: circle(0px at top right);
+      transition: all ease-in-out 750ms;
+    }
+    .header-links--open {
+      clip-path: circle(150% at top right)
+    }
+    .open .hamburger {
+      transform: rotate(45deg);
+    }
+    .open .hamburger::before {
+      opacity: 0;
+    }
+    .open .hamburger::after {
+      transform: translatey(-3px) rotate(-90deg);
+    }
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: block;
+    }
+    nav li {
+      border-bottom: 1px solid black;
+      padding-left: 1em;
+    }
+    nav li:last-child {
+      border-bottom: none;
+    }
     nav a {
       font-size: 0.75rem;
-      display: none;
+      padding: 1.5em 2em 1.5em 0;
+    }
+    .nav-icon {
+      display: inline-block;
+      margin-right: .5em;
+      width: 1.5em;
+      text-align: right;
+      color: hsl(225, 20%, 61%);
     }
     h1 {
       font-size: 1rem;
@@ -153,7 +232,7 @@ h1, h2, header #logo {
 
   .main-content {
     position: relative;
-    top: 5rem; /* To offset for fixed header. */
+    top: 80px; /* To offset for fixed header. */
     margin: 0 20px 0px 15px;
   }
 
@@ -161,17 +240,18 @@ h1, h2, header #logo {
     background-color: hsl(218, 58%, 16%);
     max-width: 1300px;
     box-shadow: 5px 5px 5px hsl(166, 40%, 50%);
-    scroll-margin-top: 4em;
+    scroll-margin-top: 170px;
   }
 
 /* about me */
   #portrait {
     flex: 1 100%;
-    margin-top: 4rem;
+    margin-top: 2rem;
     max-width: 20%;
     margin-left: 1rem;
     margin-right: 1rem;
     border-radius: 50%;
+    display: none;
   }
 
   #aboutMeContainer {
