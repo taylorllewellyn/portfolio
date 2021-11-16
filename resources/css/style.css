@@ -67,7 +67,9 @@ h1, h2, header #logo {
   }
 /* add underline to project titles and email address */
   h3, .contact h5 {
-    text-decoration: underline 0.05em hsl(166, 100%, 70%, 0);
+    text-decoration-line: underline; /* Originally had all under text-decoreation, but it didn't work that way in Safari */
+    text-decoration-color: hsl(166, 100%, 70%, 0);
+    text-decoration-thickness: 0.05em;
     transition: text-decoration-color 300ms;
   }
   .projectContainer:hover h3, .contact h5:hover {
@@ -94,7 +96,7 @@ h1, h2, header #logo {
   header .content {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
   }
   
   #name {
@@ -105,7 +107,7 @@ h1, h2, header #logo {
   }
 
   #logo {
-    padding-right: 1rem;
+    padding-right: 0.75rem;
   }
   
   nav ul {
@@ -173,7 +175,7 @@ h1, h2, header #logo {
       background: hsl(218, 58%, 16%);
       box-shadow: 5px 5px 5px hsl(166, 40%, 50%);
       clip-path: circle(0px at top right);
-      transition: all ease-in-out 750ms;
+      transition: all ease-in-out 600ms;
     }
     .header-links--open {
       clip-path: circle(150% at top right)
@@ -203,6 +205,28 @@ h1, h2, header #logo {
     nav a {
       font-size: 0.75rem;
       padding: 1.5em 2em 1.5em 0;
+      /* add underline to dropdown links */
+      text-decoration-line: underline; /* Originally had all under text-decoreation, but it didn't work that way in Safari */
+      text-decoration-color: hsl(166, 100%, 70%, 0);
+      text-decoration-thickness: 0.05em;
+      transition: text-decoration-color 300ms;
+    }
+    nav a:hover,
+    nav a:focus {
+      text-decoration-color: hsl(166, 100%, 70%, 1);
+    }
+
+    /* add underline to dropdown links */
+    h3, .contact h5 {
+
+    }
+    .projectContainer:hover h3, .contact h5:hover {
+      text-decoration-color: hsl(166, 100%, 70%, 1);
+    }
+
+
+    .header-links a::after {
+      display: none;
     }
     .nav-icon {
       display: inline-block;
@@ -275,15 +299,16 @@ h1, h2, header #logo {
     max-width: 350px;
     text-align: center;
     margin: 5px;
-    transform: scale(100%, 100%);
+    transform: scale(1, 1);
     transition-duration: 200ms;
   }
 
-  .projectContainer:hover {
-    transform: scale(105%, 105%);
+  .projectContainer:hover,
+  .projectContainer:focus {
+    transform: scale(1.05, 1.05);
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
-  };
+  }
 
   .imageContainer {
     width: 90%;
@@ -316,14 +341,14 @@ h1, h2, header #logo {
 
   #skills-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 1rem;
   }
 
   .icons {
     display: flex;
-    justify-content: space-between;
-    width: 30%;
+    justify-content: space-around;
+    width: 33.33%;
   }
 
   .icon {
